@@ -16,7 +16,8 @@ SECRET_KEY = 'fvk6kpe!%6i_w*pk@+5msxr%wyx6xut(a(0e466=31!=ql6ik$'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['http://*.onrender.com', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ["https://event-assainment.onrender.com"]
+
 
 
 
