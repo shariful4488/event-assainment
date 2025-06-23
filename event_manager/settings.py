@@ -1,4 +1,5 @@
 from pathlib import Path
+import dj_database_url 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -71,11 +72,19 @@ WSGI_APPLICATION = 'event_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgresql://event_manager_db_05lk_user:1k6P52oaMPU79vl3wZ9Lf8yE0UUhMjWg@dpg-d1cjjap5pdvs73euf00g-a.oregon-postgres.render.com/event_manager_db_05lk',
+        conn_max_age=600
+    )
 }
 
 
