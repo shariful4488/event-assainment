@@ -1,4 +1,4 @@
-django_env/
+env/
 node_modules/
 Phitron/
 populate_db.py

@@ -1,5 +1,5 @@
 from pathlib import Path
-import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,13 +9,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hyht$y7(oymo^!1xd!oq53l^x$=m1&6q%i35im2rszugmdbjp!'
+SECRET_KEY = 'fvk6kpe!%6i_w*pk@+5msxr%wyx6xut(a(0e466=31!=ql6ik$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com', 'http://127.0.0.1:8000']
+
 
 
 # Application definition
@@ -70,12 +70,13 @@ WSGI_APPLICATION = 'event_manager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 
 # DATABASES = {
 #     'default': {
@@ -88,12 +89,7 @@ WSGI_APPLICATION = 'event_manager.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://event_management_rmv9_user:4ToIR3V29sHcYQTiKJmug0gOqVArB8Qp@dpg-cukt9hl6l47c73ee1ig0-a.oregon-postgres.render.com/event_management_rmv9',
-        conn_max_age=600
-    )
-}
+
 
 
 # Password validation
